@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script>try { const t = localStorage.getItem('mic-command-desk-theme'); document.documentElement.dataset.theme = t === 'dark' || t === 'light' ? t : (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') } catch { document.documentElement.dataset.theme = 'light' }</script>
+    <title>Command Desk · Mic's workspace</title>
+    <meta name="description" content="A personal workspace for projects, priorities, and ideas.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <aside>
+        <div class="brand"><span class="logo">⌘</span> Command Desk</div>
+        <div class="sub">Workspace</div>
+        <nav><button data-view="overview" class="active"><span>▦</span>Overview</button><button
+                data-view="projects"><span>◫</span>Projects</button><button
+                data-view="tasks"><span>☑</span>Tasks</button><button data-view="links"><span>↗</span>Quick
+                links</button><button data-view="notes"><span>▤</span>Notes</button></nav>
+        <footer>
+            <div class="avatar">M</div>
+            <div>Mic's workspace<br><small>Personal command centre</small></div>
+        </footer>
+    </aside>
+    <main>
+        <header>
+            <div class="crumb">PERSONAL WORKSPACE / <span id="breadcrumb">OVERVIEW</span></div>
+            <div class="header-actions"><button type="button" class="btn theme-toggle" id="theme-toggle"
+                    aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button><input class="search"
+                    id="search" aria-label="Search projects" placeholder="⌕  Search projects…"></div>
+        </header>
+        <div class="welcome">
+            <div>
+                <h1 id="heading">A little clarity. A lot of progress.</h1>
+                <div class="muted" id="subtitle">Your projects, priorities, and next steps — together.</div>
+            </div><button class="btn primary" id="add">+ New project</button>
+        </div>
+        <div id="content"></div>
+        <div class="storage">● Saved on this browser · <button class="textbtn" id="export">Export backup</button><button
+                class="textbtn" id="import">Import backup</button><input type="file" id="file" accept="application/json"
+                hidden></div>
+    </main>
+    <dialog id="modal">
+        <form id="form"></form>
+    </dialog>
+    <div id="toast" role="status"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

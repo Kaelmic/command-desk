@@ -35,10 +35,14 @@ Saved data carries a version number. Older saves (including backups from the fir
 
 To bring your existing dashboard data over, click Export backup on the hosted dashboard, then Import backup on your local version. Keep using the same local address so your data stays available.
 
-This version does not read your project files or fetch live data from other apps. Project entries and task counts are managed within Command Desk. Live integrations can be added later.
+Project entries and task counts are managed within Command Desk. Optional Cloudflare Web Analytics is available through the local Node server; see ANALYTICS-SETUP.md. It does not read project files.
 
 This package contains the application source only, with no hosting credentials or saved personal records.
 
 ## Theme
 
 Use the Light mode / Dark mode button in the header. Your choice is remembered in this browser. Before choosing, the theme follows your device preference. Theme settings are separate from project data and backups.
+
+## Website analytics
+
+See [ANALYTICS-SETUP.md](ANALYTICS-SETUP.md) to configure Cloudflare, then run `npm start` and open http://127.0.0.1:3000. No dependencies need installing. The API token stays in your local .env file. Live Server still runs the core dashboard but cannot supply the analytics API.

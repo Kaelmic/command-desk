@@ -910,3 +910,6 @@ form textarea {
         transition: none !important
     }
 }
+
+/* Website analytics */
+.analytics-bars{height:175px;display:flex;align-items:flex-end;gap:5px;margin:25px 0;overflow-x:auto}.analytics-column{flex:1;min-width:14px;text-align:center}.analytics-bar{background:var(--green);border-radius:4px 4px 0 0;min-height:0}.analytics-column small{font-size:10px}.analytics-table{overflow:auto}.analytics-table table{border-collapse:collapse;width:100%;text-align:left}.analytics-table th,.analytics-table td{padding:10px;border-bottom:1px solid var(--line)}.analytics-table caption{text-align:left;color:var(--muted);padding:10px 0;font-size:12px}#analytics-status{color:var(--muted);margin:15px 0}.btn:disabled{opacity:.6;cursor:wait}

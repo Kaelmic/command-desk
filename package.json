@@ -1,0 +1,10 @@
+{
+  "name": "command-desk",
+  "private": true,
+  "version": "1.1.0",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.mjs",
+    "test": "node --test server.test.mjs"
+  }
+}
